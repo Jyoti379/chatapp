@@ -32,6 +32,11 @@ exports.signup = async(req,res)=>{
     }
 }
 
+function generateAccessToken(id,name,isPremium){
+    return jwt.sign({userId:id,name:name,isPremium:isPremium},'secretkey')
+
+}
+
 
 exports.login= async (req,res)=>{
     try{
@@ -50,7 +55,7 @@ exports.login= async (req,res)=>{
               throw new Error('something went wrong');
                 }
                 if(response==true){
-                    return res.status(200).json({success:true,message:'user login successful'})    
+                    return res.status(200).json({success:true,message:'user login successful',token:generateAccessToken(user[0].id,user[0].name,user[0].isPremium)})    
                 }
                 else{
                     return res.status(401).json({success:false,message:'password incorect:User not authorised'})
@@ -61,7 +66,7 @@ exports.login= async (req,res)=>{
        }else{
         return res.status(404).json({sucess:false,message:'User not found'})
       }
-      
+
     }catch(err){
         res.status(500).json({success:false,message:err}); 
     }
