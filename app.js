@@ -12,17 +12,21 @@ dotenv.config();
 
 const sequelize = require('./utill/database');
 const User = require('./model/user');
+const Message=require('./model/message');
 
 app.use(cors());
 
 
-const userRoutes=require('./routes/user')
+const userRoutes=require('./routes/user');
+const messageRoutes=require('./routes/message');
 
 app.use(bodyParser.json());
 
 app.use('/user',userRoutes);
+app.use('/message',messageRoutes);
 
-
+User.hasMany(Message);
+Message.belongsTo(User);
 
 
 
