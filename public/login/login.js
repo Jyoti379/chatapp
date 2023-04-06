@@ -1,3 +1,5 @@
+const socket=io();
+
 async function userLogin(event)  {
     try{
         event.preventDefault();
@@ -13,8 +15,10 @@ async function userLogin(event)  {
         console.log(response)
         
         alert(response.data.message) 
-      
-       
+        localStorage.setItem('token',response.data.token);
+        
+    
+        window.location.href="../chatscreen/chatscreen.html"
          })
        
  

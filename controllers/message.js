@@ -4,11 +4,14 @@ const jwt= require('jsonwebtoken');
 
 exports.addMessage = async (req,res)=>{
     try{
-     const {msg,username}=req.body;
+     const {msg,Imagefile,username,groupId}=req.body;
      console.log(msg);
      console.log(username);
+     console.log(groupId);
+     console.log(Imagefile);
 
-     const data= await Message.create({msg:msg,username:req.user.name,userId:req.user.id});
+
+     const data= await Message.create({msg:msg,imageUrl:Imagefile,username:req.user.name,userId:req.user.id,groupId:groupId});
      res.status(201).json({msg:data,username:req.user.name,message:'message sent'});
 
     }catch(err){
@@ -26,5 +29,18 @@ exports.getMessage= async (req,res)=>{
 
     }catch(err){
         res.status(500).json({error:err}) 
+    }
+}
+exports.getUsers= async (req,res)=>{
+    try{
+     return User.findAll()
+     .then(users=>{
+        res.status(200).json({users:users,})
+     })
+     .catch(err=>{
+        throw new Error(err);
+     })
+    }catch(err){
+        res.status(500).json({error:err})   
     }
 }

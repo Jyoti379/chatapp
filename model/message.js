@@ -10,9 +10,13 @@ const message=sequelize.define('message',{
     msg:{
         type:Sequelize.STRING,
     },
+    imageUrl:{
+        type:Sequelize.STRING,
+    },
     username:{
         type:Sequelize.STRING,
     }
+   
 })
 
 module.exports=message

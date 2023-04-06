@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: rgb(246, 241, 241);
+    overflow: scroll;
+
+}
+.chatview{
+   overflow-wrap: inherit;
+    position: sticky;
+    display:block;
+}
+
+.container {
+    background-color: rgb(141, 19, 143);
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.container form {
+
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+button {
+    color: purple;
+}
+
+button:hover {
+    background-color: blue;
+    color: white;
+    border-style: none;
+}
+
+input {
+    width: 300px;
+    overflow: hidden;
+}
+
+#userbar {
+    left: 0;
+    background-color: purple;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom:0;
+    overflow-x:hidden;
+
+    margin-bottom: 0;
+    padding-top: 20px;
+}
+
+.chatbar {
+    background: rgb(210, 174, 242);
+    height: 35px;
+    width: 180px;
+    color: #141415;
+    margin: 10px;
+    list-style: none;
+    left: 0;
+
+    padding: 10px;
+}
+
+.chatbar:hover {
+    background-color: blue;
+    color: white;
+}
+
+
+#messagePop {
+
+    margin-bottom: 30px;
+}
+
+.name {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.text {
+    border: 1px solid purple;
+    border-radius: 5px;
+    background: white;
+    height: 35px;
+    width: 305px;
+    color: #9400D3;
+    padding: 10px;
+}
+.update{
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+}

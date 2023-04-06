@@ -34,6 +34,8 @@
     "mysql2": "^2.3.3",
     "razorpay": "^2.8.4",
     "sequelize": "^6.25.1",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1",
     "uuid": "^9.0.0"
   }
 }

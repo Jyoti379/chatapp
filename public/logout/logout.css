@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+    
+}
+.container{
+    margin: 200px;
+    
+    font-size: large;
+    background-color:rgb(202, 192, 192);
+    color: rgb(141, 19, 143);
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+     height:50%;
+     width: 70%;
+    padding:70px;
+}

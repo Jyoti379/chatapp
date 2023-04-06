@@ -73,6 +73,6 @@ exports.login= async (req,res)=>{
 
  }
 
-
+module.export=generateAccessToken;
 
 

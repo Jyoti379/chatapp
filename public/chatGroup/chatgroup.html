@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chatgroup.css">
+    <title>group-chat</title>
+</head>
+<body>
+  <div>
+    <div class="chatview">
+      
+      <div id="userbar">
+      </div>
+     
+  
+      
+        <div id="newUser" style="list-style-type:none;"></div>
+        <div id="my-message" ></div>
+          <div id="messagePop"></div>
+         <div id="logoutuser"></div>
+          
+         
+          <div class="container">
+            
+            <form onsubmit="userMessage(event)">
+      
+              <label for="message">message</label>
+              <input id="message" name="message" type="text"  placeholder="type your message">
+              <input type="file" name="file"   id="image_input"   accept=".pdf,image/png,image/jpg">
+              <button type="submit"><b>SEND</b></button>
+      
+          </form>
+         
+      </div></div>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+      <script src="chatgroupscreen.js">
+          
+      </script>     
+</body>
+</html>
